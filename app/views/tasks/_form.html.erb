@@ -23,6 +23,11 @@
     <%= f.select("period", {"day" => "day", "week" => "week", "month" => "month"}) %>
   </div>
   <div class="clear"></div>
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id, :size => 4 %>
+  </div>
+  <div class="clear"></div>
   <div class="actions">
     <%= f.submit "Help me do this Sergeant Shame!"%>
   </div>

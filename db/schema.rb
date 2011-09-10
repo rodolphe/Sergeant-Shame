@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110910230427) do
+ActiveRecord::Schema.define(:version => 20110910230727) do
 
   create_table "check_ins", :force => true do |t|
     t.integer  "task_id"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20110910230427) do
     t.string   "period"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|
