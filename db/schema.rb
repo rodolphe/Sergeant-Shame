@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110910214748) do
+ActiveRecord::Schema.define(:version => 20110910230427) do
 
   create_table "check_ins", :force => true do |t|
     t.integer  "task_id"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20110910214748) do
     t.string   "twitter_username"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "fb_access_token"
   end
 
 end
