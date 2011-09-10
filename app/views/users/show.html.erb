@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @user.id %>
+</p>
+
+<p>
+  <b>Fb:</b>
+  <%= @user.fb_id %>
+</p>
+
+<p>
+  <b>Viadeo:</b>
+  <%= @user.viadeo_id %>
+</p>
+
+<p>
+  <b>Twitter username:</b>
+  <%= @user.twitter_username %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  fb_id: 
+  viadeo_id: 
+  twitter_username: MyString
+
+two:
+  id: 
+  fb_id: 
+  viadeo_id: 
+  twitter_username: MyString

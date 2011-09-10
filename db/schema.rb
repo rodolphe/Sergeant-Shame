@@ -17,11 +17,18 @@ ActiveRecord::Schema.define(:version => 20110910214438) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
   create_table "tasks", :force => true do |t|
     t.string   "name"
     t.integer  "frequency"
     t.string   "period"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.integer  "fb_id"
+    t.integer  "viadeo_id"
+    t.string   "twitter_username"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
