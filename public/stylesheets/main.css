@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: impact;
+}
+body {
+  font-size: 12pt;
+}
+
+h1 {
+  font-size: 24pt;
+  margin: 20px;
+}
+
+.field_name, .field_name input {
+  font-size: 18pt;
+}
+
+.field_name input {
+  margin-top: 5px;
+}
+
+.field, .actions {
+  display: inline-block;
+  margin: 20px;
+}
