@@ -26,12 +26,12 @@ class Task < ActiveRecord::Base
   def shame
     access_token = user.fb_access_token
     MiniFB.post(access_token, 'me/feed',
-                :message => "Please help me - I have failed at my goal!",
+                :message => "Please help me - I am a useless pice of shit who should have my reproductive organs ripped from my body so as to contaminator the gene pool!",
                 :picture => "http://www.testpicture.com",
                 :link => "http://sergeantshame.com",
                 :name => "Shame on you!",
                 :caption => "says Sergeant Shame",
-                :description => "You have failed your mission by only going to the gym X times a week instead of 5")
+                :description => "I am a lazy sack of shit who can't manage to #{name} #{frequency} times a #{period}.")
   end
 
 end
