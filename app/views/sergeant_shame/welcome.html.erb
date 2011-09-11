@@ -1,0 +1,24 @@
+<div id="fb-root"></div> 
+<script> 
+  window.fbAsyncInit = function() {
+    FB.init({appId: '<%= @fb_app_id %>', status: true, cookie: true,xfbml: true});
+  };
+ 
+  (function() {
+    var e = document.createElement('script'); e.async = true;
+    e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+    document.getElementById('fb-root').appendChild(e);
+  }());
+ 
+  function facebook_onlogin(){
+    session = FB.getSession();
+	if (session != null) {
+	  window.location = '/sergeant_shame/logged_in?access_token=' + escape(session.access_token);
+	}
+  }
+</script> 
+ 
+<h1>Sergeant Shame will make you an honest person out of you!</h1>
+ 
+<fb:login-button perms="publish_stream,offline_access" onlogin="facebook_onlogin()" size="xlarge" background="white">
+Start your Training now!</fb:login-button>
