@@ -18,12 +18,9 @@ class Task < ActiveRecord::Base
     return times_checkedin
   end
 
-  def we_good
-    if count_checkins < frequency
-      "YOU IDIOT WHAT IS WRONG WITH YOU"
-    else
-      "We good"
-    end
+  def we_good?
+    return false if count_checkins < frequency
+    true
   end
 
 end
