@@ -42,9 +42,13 @@ class TasksController < ApplicationController
   # POST /tasks.xml
   def create
     @task = Task.new(params[:task])
+    @user = User.find session[:user_id]
+    redirect_to "/" unless not @user.nil?
 
     respond_to do |format|
       if @task.save
+        @task.user = @user
+        @task.save
         format.html { redirect_to(@task, :notice => "I'll see what I can do you dirty ape.") }
         format.xml  { render :xml => @task, :status => :created, :location => @task }
       else

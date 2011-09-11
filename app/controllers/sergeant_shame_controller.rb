@@ -10,6 +10,15 @@ class SergeantShameController < ApplicationController
 
   def logged_in    
     @access_token = params["access_token"]
+    session[:access_token] = params["access_token"]
+    search = User.where(:fb_access_token => params["access_token"])
+    if search.empty?
+      user = User.create(:fb_access_token => params["access_token"])
+    else
+      user = search.first
+    end
+    session[:user_id] = user.id
+    redirect_to "/users/#{user.id}"
   end
 
 end
