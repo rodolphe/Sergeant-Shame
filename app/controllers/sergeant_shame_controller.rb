@@ -21,8 +21,6 @@ class SergeantShameController < ApplicationController
       session[:user_id] = user.id
       redirect_to "/tasks/"
     end
-    session[:user_id] = user.id
-    redirect_to "/tasks/new"
   end
 
 end
