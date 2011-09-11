@@ -2,7 +2,9 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.xml
   def index
-    @tasks = Task.all
+    redirect_to "/" unless session.has_key? :user_id
+    @user = User.find session[:user_id]
+    @tasks = @user.tasks
 
     respond_to do |format|
       format.html # index.html.erb
