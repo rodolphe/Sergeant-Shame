@@ -26,6 +26,13 @@ class TasksController < ApplicationController
   # GET /tasks/new.xml
   def new
     @task = Task.new
+    redirect_to "/" unless session.has_key? :user_id
+    @user = User.find session[:user_id]
+    @checkins = MiniFB.get(@user.fb_access_token, 'me/checkins')
+    @places = {}
+    @checkins['data'].each do |checkin|
+      @places[checkin['place']['name']] = checkin['place']['id']
+    end
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,8 +49,8 @@ class TasksController < ApplicationController
   # POST /tasks.xml
   def create
     @task = Task.new(params[:task])
+    redirect_to "/" unless session.has_key? :user_id
     @user = User.find session[:user_id]
-    redirect_to "/" unless not @user.nil?
 
     respond_to do |format|
       if @task.save
