@@ -22,5 +22,16 @@ class Task < ActiveRecord::Base
     return false if count_checkins < frequency
     true
   end
+  
+  def shame
+    access_token = user.fb_access_token
+    MiniFB.post(access_token, 'me/feed',
+                :message => "Please help me - I have failed at my goal!",
+                :picture => "http://www.testpicture.com",
+                :link => "http://sergeantshame.com",
+                :name => "Shame on you!",
+                :caption => "says Sergeant Shame",
+                :description => "You have failed your mission by only going to the gym X times a week instead of 5")
+  end
 
 end
