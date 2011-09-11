@@ -14,11 +14,13 @@ class SergeantShameController < ApplicationController
     search = User.where(:fb_access_token => params["access_token"])
     if search.empty?
       user = User.create(:fb_access_token => params["access_token"])
+      session[:user_id] = user.id
+      redirect_to "/tasks/new/"
     else
       user = search.first
+      session[:user_id] = user.id
+      redirect_to "/tasks/"
     end
-    session[:user_id] = user.id
-    redirect_to "/tasks/new"
   end
 
 end
