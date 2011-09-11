@@ -24,12 +24,8 @@
   </div>
   <div class="clear"></div>
   <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id, :size => 4 %>
-  </div>
-  <div class="field">
     <%= f.label :place_id %>
-    <%= f.text_field :place_id %>
+    <%= f.select("place_id", @places) %>
   </div>
   <div class="clear"></div>
   <div class="actions">

@@ -29,3 +29,5 @@ gem 'mini_fb'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+gem 'mini_fb'
