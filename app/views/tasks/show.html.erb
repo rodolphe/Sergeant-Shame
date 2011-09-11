@@ -1,36 +1,18 @@
-<h1 id="notice"><%= notice %></h1>
+<div class="container clearfix">
+<div class="grid4 first">
+	<img src="../../images/sergeant.jpg" width="152px">
+	</div>
+	<div class="grid8" id="left_side">
+		<% if @check_ins.empty? %>
+				<p class="sergeant_talk">You better get your ass in gear you useless trogolodyte</p>
+		<% else %>
+		<%= render 'check_ins/check_ins' %>
+		<% end %>
+	
+		<h1 id="notice"><%= notice %></h1>
+		<p class="sergeant_talk">You will <%= @task.name %> at least <%= @task.frequency %> per <%= @task.period %>!</p>
 
-<h1>
-  <%= @task.name %>
-</h1>
-
-<p>
-  <b>User:</b>
-  <%= @task.user_id %>
-</p>
-
-<p>
-  <b>Frequency:</b>
-  <%= @task.frequency %>
-</p>
-
-<p>
-  <b>Period:</b>
-  <%= @task.period %>
-</p>
-
-<p>
-  <b>Place id:</b>
-  <%= @task.place_id %>
-</p>
-
-<h2>Check ins</h2>
-
-<% if @check_ins.empty? %>
-<p>You better get your ass in gear you useless trogolodyte</p>
-<% else %>
-<%= render 'check_ins/check_ins' %>
-<% end %>
-
+	</div>
+</div>
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>
