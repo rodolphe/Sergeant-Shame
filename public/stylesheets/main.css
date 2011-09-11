@@ -45,11 +45,6 @@ th, td {
 #left_side {
 background: url('http://localhost:3000/images/bubble.png') no-repeat 75px 0px;
 height: 200px;
-
+text-align: left;
 }
 
-.sergeant_img{
-	background: url('../images/sergeant.jpg') no-repeat !important;
-	width: 152px;
-
-}

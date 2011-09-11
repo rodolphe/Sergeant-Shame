@@ -18,7 +18,7 @@ class SergeantShameController < ApplicationController
       user = search.first
     end
     session[:user_id] = user.id
-    redirect_to "/users/#{user.id}"
+    redirect_to "/tasks/new"
   end
 
 end
