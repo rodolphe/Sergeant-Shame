@@ -11,19 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
+  <div class="field field_name">
+    <%= f.label :name, "I want to…" %><br />
     <%= f.text_field :name %>
   </div>
+  <div class="clear"></div>
   <div class="field">
-    <%= f.label :frequency %><br />
-    <%= f.text_field :frequency %>
+    <%= f.text_field :frequency, :size => 4 %>
+    <%= f.label :frequency, "times" %>
+    <%= f.label :period, "per" %>
+    <%= f.select("period", {"day" => "day", "week" => "week", "month" => "month"}) %>
+  </div>
+  <div class="clear"></div>
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id, :size => 4 %>
   </div>
   <div class="field">
-    <%= f.label :period %><br />
-    <%= f.text_field :period %>
+    <%= f.label :place_id %>
+    <%= f.text_field :place_id %>
   </div>
+  <div class="clear"></div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Help me do this Sergeant Shame!"%>
   </div>
 <% end %>

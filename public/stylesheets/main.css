@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 12pt;
+}
+
+h1, h2 {
+  font-family: impact;
+  font-size: 24pt;
+  margin: 20px;
+}
+
+p, table {
+  margin-left: 20px;
+}
+
+th, td {
+  text-align: left;
+}
+
+.field_name, .field_name input {
+  font-size: 18pt;
+}
+
+.field_name input {
+  margin-top: 5px;
+}
+
+.field, .actions {
+  display: inline-block;
+  margin: 20px;
+}
