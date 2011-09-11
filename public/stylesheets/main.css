@@ -32,3 +32,24 @@ th, td {
   display: inline-block;
   margin: 20px;
 }
+
+.sergeant_talk{
+	font-family: Lucida Grande;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: black;
+	line-height: 1.5em;
+	width: 400px;
+}
+
+#left_side {
+background: url('http://localhost:3000/images/bubble.png') no-repeat 75px 0px;
+height: 200px;
+
+}
+
+.sergeant_img{
+	background: url('../images/sergeant.jpg') no-repeat !important;
+	width: 152px;
+
+}
